@@ -58,3 +58,14 @@ Git branch architecture :
 * **develop**: Code reviewd by peers on each feature that is developed in the feature_branch
 
 * **feature_branch**: Code pushed by a developer pertaining only to one feature
+
+
+
+
+
+
+******Sample Results******
+
+
+<img width="1440" alt="Screen Shot 2021-11-29 at 7 09 33 AM" src="https://user-images.githubusercontent.com/38560396/143865668-4199d0e9-b70a-4594-9fed-ea6c46837618.png">
+
