@@ -51,4 +51,10 @@ After you check the full details of a ticket. You must press enter to continue b
 Known Issues:
 The program will crash if you have no internet connection.
 
+Git branch architecture :
 
+* **Main** : Code reviewed by peers and merged from develop branch
+
+* **develop**: Code reviewd by peers on each feature that is developed in the feature_branch
+
+* **feature_branch**: Code pushed by a developer pertaining only to one feature
