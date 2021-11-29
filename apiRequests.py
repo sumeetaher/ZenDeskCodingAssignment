@@ -28,12 +28,12 @@ def get_tickets(domain, user, password):
     #Takes sub-domain, user email address and password and
     #returns a dictionary containing the returned JSON from the API call
 
-    print("Downloading tickets...\n")
+    print("Downloading tickets.....\n")
 
     url = 'https://{sub_domain}.zendesk.com/api/v2/tickets.json'.format(sub_domain=domain)
 
         # Do the HTTP get request
-    res = requests.get(url, auth=(user, pwd))
+    res = requests.get(url, auth=(user, password))
 
     # Check for HTTP codes other than 200
     if res.status_code != 200:
@@ -45,7 +45,7 @@ def get_tickets(domain, user, password):
     # this loop is needed to grab all tickets since each call only returns 100.
     while j['next_page'] != None:
         url = j['next_page']
-        res = requests.get(url, auth=(user, pwd))
+        res = requests.get(url, auth=(user, password))
         data = res.json()
         j['tickets'] += data['tickets']
         j['next_page'] = data['next_page']

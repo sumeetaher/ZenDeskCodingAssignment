@@ -1,9 +1,14 @@
 import getpass, re
 import cliDisplay as cli
 
+# Variables related to handling tickets, we store them here so this module can easily make changes to them.
+current_page = 0
+user_dic = {}
+tickets = {}
+
 def ask_domain():
     #ask the user for its domain name on zendesk
-    return input("Welcome Jedi, please enter your Zendesk sub-domain (eg. sub_domain): ")
+    return input("Welcome, please enter your Zendesk sub-domain (eg. sub_domain): ")
 
 def ask_pwd():
     #ask the password without echoing

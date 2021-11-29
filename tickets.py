@@ -1,20 +1,20 @@
 
 import apiRequests, loginDetails
 
-##Main ticket viewer
+#Main ticket viewer
 print("Welcome to Zendesk Ticket Viewer by Sumeet")
 
 domain = loginDetails.ask_domain()
 
-usr, pwd = loginDetails.ask_user_name(), login_details.ask_pwd()
+usr, pwd = loginDetails.ask_user_name(), loginDetails.ask_pwd()
 
 # print(domain, usr, pwd)
 
-tickets = apiRequests.get_tickets(domain, usr, pwd)
+loginDetails.tickets = apiRequests.get_tickets(domain, usr, pwd)
 
-user_dic = apiRequests.get_user_dictionary(domain, usr, pwd)
+loginDetails.user_dic = apiRequests.get_user_dictionary(domain, usr, pwd)
 
-current_page = 1
+loginDetails.current_page = 1
 
 loginDetails.main_input(None)
 
