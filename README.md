@@ -1,15 +1,14 @@
-Files:
-•tickets.py : the main job which will initiate the cli display of results
-•cliDisplay.py : the print tickets and print a particular ticket function along with filtering of columns from input json
-•apiRequests.py : calling ticket info from the subdomain
-•loginDetails.py : request the user for the details to connect with the api
+**Files:**
+* **tickets.py** : the main job which will initiate the cli display of results
 
-Prerequisite:
-Python 3/2
-Run the tickets.py file 
-Enter the requested authentication details and enjoy the ticket viewer.
+* **cliDisplay.py** : the print tickets and print a particular ticket function along with filtering of columns from input json
 
-What is this?
+* **apiRequests.py**: calling ticket info from the subdomain
+
+* **loginDetails.py**: request the user for the details to connect with the api
+
+
+**What is this?**
 
 This is my ticket viewer for the Zendesk internship coding challenge.
 How do I use it?
@@ -20,14 +19,30 @@ After you have done this it will download all the tickets on your account. This 
 
 The tickets(<=25) when displayed have the following columns:
 
-ticket_id : corresponding ticket number
-created_at : date timestamp of the creation of the ticket
+ ```
+ ticket_id : corresponding ticket number
+  ```
+ ```
+ created_at : date timestamp of the creation of the ticket
+  ```
+  ```
 updated_at : date timestamp of the last update on this ticket
-subject : subject of the ticket
+ ```
+ ```
+ subject : subject of the ticket
+ ```
+  ```
 priority : priority of the issue for which ticket is created
+ ```
+  ```
 status : open/close? or some other defined by the developers
+ ```
+  ```
 requested_by : who requested this ticket to be solved
+ ```
+  ```
 tags : group of one word descriptions of the sub-problems
+ ```
 
 From here it will give you a number of input prompts. You can enter a letter (case insensitive) in brackets or a ticket ID (from those displayed) to execute the relevant command.
 
