@@ -1,20 +1,31 @@
 import getpass, re
 import cliDisplay as cli
 
+#this file shall contain all the required authentication details required from the user to perform various activites
+
 # Variables related to handling tickets, we store them here so this module can easily make changes to them.
 current_page = 0
 user_dic = {}
 tickets = {}
 
 def ask_domain():
+    """
+    :rtype: string
+    """
     #ask the user for its domain name on zendesk
     return input("Welcome, please enter your Zendesk sub-domain (eg. sub_domain): ")
 
 def ask_pwd():
+    """
+    :rtype: string
+    """
     #ask the password without echoing
     return getpass.getpass("Please enter your password: ")
 
 def ask_user_name():
+    """
+    :rtype: string
+    """
     #ask the user for their Zendesk email address
     #Checking some basic error possibilities even
     #though the request will fail anyway but the
@@ -30,6 +41,9 @@ def ask_user_name():
     return user_name
 
 def main_input(inp):
+    """
+    :rtype: None
+    """
     #handle the input in the main event loop
 
     global current_page, user_dic, tickets
