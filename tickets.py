@@ -1,7 +1,7 @@
 
 import apiRequests, loginDetails
 
-#Main ticket viewer
+#Main ticket viewer which is to be run
 print("Welcome to Zendesk Ticket Viewer by Sumeet")
 
 domain = loginDetails.ask_domain()

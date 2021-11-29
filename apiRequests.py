@@ -2,6 +2,12 @@ import requests
 
 ##api requests
 def get_user_dictionary(domain, user, pwd):
+    """
+    :type domain: string
+    :type user: string
+    :type pwd: string
+    :rtype: dict{}
+    """
     # Takes sub-domain, user email and password. Returns a dicstionary that maps user id's to their user_name
 
     #here set up user list
@@ -24,7 +30,12 @@ def get_user_dictionary(domain, user, pwd):
     return user_dic
 
 def get_tickets(domain, user, password):
-
+    """
+    :type domain: string
+    :type user: string
+    :type password: string
+    :rtype: dict{}
+    """
     #Takes sub-domain, user email address and password and
     #returns a dictionary containing the returned JSON from the API call
 

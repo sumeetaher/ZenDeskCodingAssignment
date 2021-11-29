@@ -2,7 +2,15 @@ import pandas as pd
 import json
 import datetime, calendar
 
+#this contains all the functions that will display the results
+
 def print_page(curr_page, user_dic, tickets):
+    """
+    :type curr_page: int
+    :type user_dic: dict
+    :type tickets: dic{tickets:List[]}
+    :rtype: None
+    """
     #preparing the list for headers for the dataframe to be printed
     req_headers = ['ticket_id', 'created_at', 'updated_at', 'subject', 'priority', 'status', 'requested_by','tags']
 
@@ -38,6 +46,13 @@ def print_page(curr_page, user_dic, tickets):
 
 
 def print_ticket(curr_page, user_dic, tickets, id):
+    """
+    :type curr_page: int
+    :type user_dic: dict
+    :type tickets: dic{tickets:List[]}
+    :type id: int
+    :rtype: None
+    """
 
     #prints the info for a specific ticket on the current Page
 
