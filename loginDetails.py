@@ -1,4 +1,5 @@
 import getpass, re
+import cliDisplay as cli
 
 def ask_domain():
     #ask the user for its domain name on zendesk
@@ -31,12 +32,12 @@ def main_input(inp):
     if inp == None:
 
         #This happens the first time the function is called.
-        print_page(current_page, user_dic, tickets)
+        cli.print_page(current_page, user_dic, tickets)
 
     elif inp.lower() == 'n':
         if current_page < len(tickets['tickets']) //25 + 1:
             current_page += 1
-            print_page(current_page, user_dic, tickets)
+            cli.print_page(current_page, user_dic, tickets)
 
         else:
             print("You are on the last page, you cant go forward any further.")
@@ -44,14 +45,14 @@ def main_input(inp):
     elif inp.lower() == 'p':
         if current_page > 1:
             current_page -= 1
-            print_page(current_page, user_dic, tickets)
+            cli.print_page(current_page, user_dic, tickets)
 
         else:
             print("You are on the first page, you cant go back any further. \n")
 
     elif inp.isdigit():
         id = int(inp)
-        print_ticket(current_page, user_dic, tickets, id)
+        cli.print_ticket(current_page, user_dic, tickets, id)
 
     elif inp.lower() == 'q' or inp.lower() == 'quit':
         quit()
